@@ -75,6 +75,10 @@ export default function TvGenreModal(props: ITvGenreModalProps) {
     }
   },[openGenreModal]) // eslint-disable-line
 
+  if(!openGenreModal){
+    return navigate("/TV")
+  }
+
   return (
     <div className="w-full h-full flex">
       <div className="h-[700px] bg-gray-800/20 w-full">

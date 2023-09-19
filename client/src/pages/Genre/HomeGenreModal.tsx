@@ -81,6 +81,10 @@ export default function HomeGenreModal(props: IHomeGenreModalProps) {
     }
   },[openGenreModal]) // eslint-disable-line
 
+  if(!openGenreModal){
+    return navigate("/Home")
+  }
+
   
 
 
