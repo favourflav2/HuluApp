@@ -43,13 +43,13 @@ export default function SliderCards({ item }: ISliderCardsProps) {
         <LazyLoadImage
           src={`https://image.tmdb.org/t/p/w342/${item?.poster_path}`}
           alt="Tv/Movie Img"
-          className=" w-[180px] h-[270px] object-cover  group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
+          className=" w-[180px] h-[270px] object-cover  sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
           effect="blur"
           placeholderSrc={grayLazy}
         />
 
         {/* image overlay */}
-        <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-black/30  group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg group-hover:border-4 group-hover:border-gray-300">
+        <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 sm:group-hover:opacity-100 sm:group-hover:bg-black/30  sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg sm:group-hover:border-4 sm:group-hover:border-gray-300">
           <button
             className="p-3 bg-white rounded-full"
           >

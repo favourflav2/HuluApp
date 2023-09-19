@@ -55,11 +55,11 @@ export default function SavedCard({ item, loading }: ISavedCardProps) {
             <img
               src={`https://image.tmdb.org/t/p/w500/${item?.img}`}
               alt=""
-              className="w-full lg:h-[370px] md:h-[390px] sm:h-[506px] min-[600px]:h-[410px] min-[550px]:h-[380px]  min-[500px]:h-[350px]   min-[471px]:h-[320px] min-[420px]:h-[285px] min-[380px]:h-[253px]  object-cover group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
+              className="w-full lg:h-[370px] md:h-[390px] sm:h-[506px] min-[600px]:h-[410px] min-[550px]:h-[380px]  min-[500px]:h-[350px]   min-[471px]:h-[320px] min-[420px]:h-[285px] min-[380px]:h-[253px]  object-cover sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
             />
 
             {/* Image OverLay */}
-            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-black/30 group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg group-hover:border-4 group-hover:border-gray-300">
+            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 sm:group-hover:opacity-100 sm:group-hover:bg-black/30 sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg sm:group-hover:border-4 sm:group-hover:border-gray-300">
               <button className="p-3 bg-white rounded-full">
                 <EastIcon />
               </button>
@@ -74,7 +74,7 @@ export default function SavedCard({ item, loading }: ISavedCardProps) {
 
           <div className="w-full flex items-start pb-5 mt-2">
             <Tooltip title="Remove From Your Stuff">
-              <button className=" rounded-full p-[2px] border border-gray-200 transition ease-in-out delay-150 duration-200 hover:scale-105" onClick={() => dispatch(saveTvOrMovie(itemData))}>
+              <button className=" rounded-full p-[2px] border border-gray-200 transition ease-in-out delay-150 duration-200 sm:hover:scale-105" onClick={() => dispatch(saveTvOrMovie(itemData))}>
                 <RemoveIcon className="text-gray-200" />
               </button>
             </Tooltip>

@@ -24,7 +24,7 @@ export default function GenreCard({item}: IGenreCardProps) {
   //console.log(selectedGenre)
     
   return (
-    <div className={` h-[200px] genreCard rounded-xl relative transition ease-in-out delay-150  duration-300 hover:border-4 hover:border-gray-300 my-2 ${item.genre === "Action" ? 'mr-2' : 'mx-2'}`} onClick={()=>{
+    <div className={` h-[200px] genreCard rounded-xl relative transition ease-in-out delay-150  duration-300 sm:hover:border-4 sm:hover:border-gray-300 my-2 ${item.genre === "Action" ? 'mr-2' : 'mx-2'}`} onClick={()=>{
       if(pageUrl === "Home"){
         dispatch(selectGenre({...item}))
         dispatch(openGenreModalFunc())

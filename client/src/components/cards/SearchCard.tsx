@@ -20,7 +20,7 @@ export default function SearchCard({ item, loading }: ISearchCardProps) {
   const { pathname } = useLocation();
   return (
     <div
-      className="w-full h-auto flex flex-col text-gray-200 transition ease-in-out delay-150 duration-300 hover:bg-gray-700/20 cursor-pointer"
+      className="w-full h-auto flex flex-col text-gray-200 transition ease-in-out delay-150 duration-300 sm:hover:bg-gray-700/20 cursor-pointer"
       onClick={() => {
         if(item?.poster_path){
             if (item?.media_type === "movie") {

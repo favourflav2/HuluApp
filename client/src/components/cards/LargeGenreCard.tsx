@@ -63,7 +63,7 @@ export default function LargeGenreCard({ item, loading }: ILargeGenreCardProps) 
       {loading ? (
         <Skeleton variant="rectangular" className="w-auto h-[300px] my-5 mx-2" />
       ) : (
-        <div className=" w-auto  h-auto flex flex-col group rounded-lg hover:scale-105 hover:border-4 hover:border-gray-200 transition ease-in-out delay-100 duration-300 my-5 mx-2 ">
+        <div className=" w-auto  h-auto flex flex-col group rounded-lg sm:hover:scale-105 sm:hover:border-4 sm:hover:border-gray-200 transition ease-in-out delay-100 duration-300 my-5 mx-2 ">
           {item?.poster_path === null ? (
             <LazyLoadImage src={noImage} alt="" className=" object-cover  h-[300px] w-auto  rounded-t-lg" effect="blur" placeholderSrc={grayLazy} />
           ) : (

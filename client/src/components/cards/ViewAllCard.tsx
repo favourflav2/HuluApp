@@ -47,7 +47,7 @@ export default function ViewAllCard({ item, loading }: IViewAllCardProps) {
               <LazyLoadImage
                 src={`https://image.tmdb.org/t/p/w780/${item?.poster_path}`}
                 alt="Tv/Movie Img"
-                className=" 2xl:w-[260px] 2xl:h-[390px]  xl:w-[230px] xl:h-[345px] sm:w-[220px] sm:h-[330px] h-[513px]   object-cover  group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
+                className=" 2xl:w-[260px] 2xl:h-[390px]  xl:w-[230px] xl:h-[345px] sm:w-[220px] sm:h-[330px] h-[513px]   object-cover  sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
                 effect="blur"
                 placeholderSrc={grayLazy}
               />
@@ -55,21 +55,21 @@ export default function ViewAllCard({ item, loading }: IViewAllCardProps) {
               <LazyLoadImage
                 src={noImage}
                 alt="Tv/Movie Img"
-                className=" 2xl:w-[260px] 2xl:h-[390px]  xl:w-[230px] xl:h-[345px] sm:w-[220px] sm:h-[330px] h-[513px]  object-cover  group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
+                className=" 2xl:w-[260px] 2xl:h-[390px]  xl:w-[230px] xl:h-[345px] sm:w-[220px] sm:h-[330px] h-[513px]  object-cover  sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
                 effect="blur"
                 placeholderSrc={grayLazy}
               />
             )}
 
             {/* image overlay */}
-            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-black/30  group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg group-hover:border-4 group-hover:border-gray-300">
+            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 sm:group-hover:opacity-100 sm:group-hover:bg-black/30  sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg sm:group-hover:border-4 sm:group-hover:border-gray-300">
               <button className="p-3 bg-white rounded-full">
                 <EastIcon />
               </button>
             </div>
           </div>
 
-          <h1 className=" md:text-[14px] text-[12px]  mb-2 mt-2 font-medium transition ease-in-out delay-150 duration-300 cursor-pointer text-gray-200 group-hover:scale-105 group-hover:underline group-hover:translate-y-1">
+          <h1 className=" md:text-[14px] text-[12px]  mb-2 mt-2 font-medium transition ease-in-out delay-150 duration-300 cursor-pointer text-gray-200 sm:group-hover:scale-105 sm:group-hover:underline sm:group-hover:translate-y-1">
             {item?.title ? (item.title.length > 20 ? item.title.slice(0, 20) + "..." : item.title) : item?.name.length > 20 ? item.name.slice(0, 20) + "..." : item.name}
           </h1>
         </div>

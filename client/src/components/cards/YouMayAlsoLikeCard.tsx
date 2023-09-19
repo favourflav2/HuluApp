@@ -67,11 +67,11 @@ export default function YouMayAlsoLikeCard({ item, loading }: IYouMayAlsoLikeCar
             <img
               src={`${item?.poster_path ? `https://image.tmdb.org/t/p/w500/${item?.poster_path}` : `${noImage}`}`}
               alt=""
-              className=" sm:w-[220px] w-[170px] h-[255px] sm:h-[330px] object-cover group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
+              className=" sm:w-[220px] w-[170px] h-[255px] sm:h-[330px] object-cover sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg"
             />
 
             {/* Image OverLay */}
-            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-black/30 group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg group-hover:border-4 group-hover:border-gray-300">
+            <div className=" absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 sm:group-hover:opacity-100 sm:group-hover:bg-black/30 sm:group-hover:scale-105 transition ease-in-out delay-150 duration-300 rounded-lg sm:group-hover:border-4 sm:group-hover:border-gray-300">
               <button className="p-3 bg-white rounded-full">
                 <EastIcon />
               </button>
