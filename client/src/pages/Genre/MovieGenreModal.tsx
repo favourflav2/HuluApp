@@ -2,7 +2,7 @@ import * as React from "react";
 import { Dispatch, UseSelector } from "../../redux/store";
 import { Modal } from "@mui/material";
 import { closeGenreModal, setSelectedGenre } from "../../redux/features/huluSlice";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useGetHighGrossingMovieByYearAndGenreQuery, useGetMovieByOneGenreQuery, useGetMovieByTwoGenreQuery } from "../../redux/api/movieApi";
 import HomeSlider from "../../components/HomeSlider/HomeSlider";
@@ -83,7 +83,7 @@ export default function MovieGenreModal(props: IMovieGenreModalProps) {
   },[openGenreModal]) // eslint-disable-line
 
   if(!openGenreModal){
-    return navigate("/Movies")
+    return <Navigate to="Movies" />
   }
 
   return (

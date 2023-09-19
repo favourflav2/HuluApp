@@ -2,7 +2,7 @@ import * as React from "react";
 import { Dispatch, UseSelector } from "../../redux/store";
 import { Modal } from "@mui/material";
 import { closeGenreModal, setSelectedGenre } from "../../redux/features/huluSlice";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useGetTvByHighVoteCountQuery, useGetTvByOneGenreQuery, useGetTvByTwoGenreQuery } from "../../redux/api/tvApi";
 import LargeGenreSlider from "../../components/HomeSlider/LargeGenreSlider";
@@ -76,7 +76,7 @@ export default function TvGenreModal(props: ITvGenreModalProps) {
   },[openGenreModal]) // eslint-disable-line
 
   if(!openGenreModal){
-    return navigate("/TV")
+    return <Navigate to="/TV" />
   }
 
   return (
