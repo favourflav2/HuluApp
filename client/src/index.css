@@ -149,7 +149,7 @@ backdrop-filter: blur(0.9px);
   }
 
   .Mui-selected {
-    color: #19d27c;
+    color: #19d27c ;
 }
 
 .MuiOutlinedInput-notchedOutline{
@@ -178,7 +178,10 @@ backdrop-filter: blur(0.9px);
   color:black;
 }
 .css-wvwga8-MuiButtonBase-root-MuiTab-root.Mui-selected{
-  color: #19d27c;
+  color: #19d27c !important;
+}
+.css-bjzamv.Mui-selected {
+  color: #19d27c !important;
 }
 
 .signUpBox{
@@ -187,4 +190,7 @@ backdrop-filter: blur(0.9px);
 
 .profileShadow{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.MuiButtonBase-root .MuiTab-root .MuiTab-textColorPrimary .Mui-selected{
+  color: #19d27c !important;
 }
