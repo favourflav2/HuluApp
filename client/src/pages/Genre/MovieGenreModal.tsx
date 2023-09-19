@@ -83,12 +83,12 @@ export default function MovieGenreModal(props: IMovieGenreModalProps) {
   },[openGenreModal]) // eslint-disable-line
 
   if(!openGenreModal){
-    return <Navigate to="Movies" />
+    return <Navigate to="/Movies" />
   }
 
   return (
     <div className="w-full h-full flex">
-      <div className="h-[700px] bg-gray-800/20 w-full">
+      <div className="h-[700px] bg-zinc-800 w-full">
         {/* Modal */}
         <Modal
           open={openGenreModal}
