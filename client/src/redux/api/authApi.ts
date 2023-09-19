@@ -24,7 +24,10 @@ interface ChangeName {
     lastName:string | number
 }
 
-const API = axios.create({baseURL: "http://localhost:5001"})
+const devEnv = process.env.NODE_ENV !== "production"
+
+
+const API = axios.create({baseURL: `{${devEnv ? process.env.REACT_APP_LOCALHOST_API : process.env.REACT_APP_PROD_API}}`})
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('profile')){
