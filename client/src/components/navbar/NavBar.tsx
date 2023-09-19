@@ -198,10 +198,10 @@ export default function NavBar(props: INavBarProps) {
       {/* -------------------------------------------------------------------------------------------------------------------------------- */}
 
       {/* Mobile Content */}
-      <div className="w-full h-full md:hidden flex justify-between items-center px-5 relative z-10">
+      <div className="w-full h-full md:hidden flex justify-between items-center px-2 relative z-10">
         {/* Logo */}
         {/* <img src={hulu} alt="" className=" object-cover h-[70px]" /> */}
-        <h1 className="huluGreen font-extrabold text-[23px]">
+        <h1 className="huluGreen font-extrabold text-[23px] w-full">
           <Link to="/Home">BULU</Link>
         </h1>
 
@@ -281,7 +281,7 @@ export default function NavBar(props: INavBarProps) {
 
         {/* Right Side */}
         {user ? (
-          <div className="w-auto h-full flex items-center">
+          <div className="w-full h-full flex items-center justify-end">
             <SearchIcon className=" cursor-pointer text-[30px] text-gray-400" onClick={() => navigate("/search")} />
 
             <div className="h-[40px] rounded-full border-2 border-white bg-inherit flex items-center p-4 ml-5" onClick={(e) => handleOpenUserMenu(e)}>
@@ -289,14 +289,14 @@ export default function NavBar(props: INavBarProps) {
             </div>
           </div>
         ) : (
-          <div className="w-auto h-full flex items-center">
-            <SearchIcon className=" cursor-pointer text-[30px] mr-1 text-gray-400" onClick={() => navigate("/search")} />
+          <div className="w-full h-full flex items-center justify-end">
+            <SearchIcon className=" cursor-pointer text-[25px] mr-1 text-gray-400" onClick={() => navigate("/search")} />
 
             <div className="w-auto flex items-center  transition ease-in-out delay-150 duration-250 cursor-pointer  text-gray-400 hover:text-white">
-              <h4 className="mr-2">
+              <h4 className="mr-2 text-[13px]">
                 <Link to="/login">Sign In</Link>
               </h4>
-              <PersonIcon />
+              <PersonIcon className="text-[20px]"/>
             </div>
           </div>
         )}

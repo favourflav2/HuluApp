@@ -120,7 +120,7 @@ export default function TvDetails(props: ITvDetailsProps) {
           >
             <span></span>
 
-            {!isFetching && <h1 className={`${changeScroll ? "text-white font-medium" : "text-white font-bold underline md:bg-black/20 "}  text-[19px] rounded-md p-2`}>{data?.name}</h1>}
+            {!isFetching && <h1 className={`${changeScroll ? "text-white font-medium" : "text-white font-bold underline md:bg-black/20 "}  sm:text-[19px] text-[14px] rounded-md p-2`}>{data?.name}</h1>}
 
             <button
               className={`${changeScroll ? "text-white" : " text-white bg-black/30 mr-1"} absolute right-0 rounded-md p-2`}
