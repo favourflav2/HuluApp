@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dispatch, UseSelector } from "../../redux/store";
+import { Dispatch } from "../../redux/store";
 import { openGenreModalFunc, selectGenre } from "../../redux/features/huluSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -17,7 +17,6 @@ export interface IGenreCardProps {
 
 export default function GenreCard({item}: IGenreCardProps) {
   const dispatch = Dispatch()
-  const {selectedGenre} = UseSelector(state => state.hulu)
   const {pathname} = useLocation()
   const pageUrl = pathname?.slice(1,pathname.length)
   const navigate = useNavigate()
