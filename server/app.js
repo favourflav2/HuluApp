@@ -25,6 +25,7 @@ app.listen(port, ()=>{
 
 app.get('/',(req,res)=>{
     console.log("Welcome to the backend")
+    res.send("Hello")
 })
 
 app.use("/auth",authRoutes)
