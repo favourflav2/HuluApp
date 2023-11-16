@@ -2,14 +2,14 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import React, { Suspense, lazy } from "react";
 import Footer from "./components/footer/Footer";
-import HomeGenreModal from "./pages/Genre/HomeGenreModal";
-import MovieGenreModal from "./pages/Genre/MovieGenreModal";
-import TvGenreModal from "./pages/Genre/TvGenreModal";
-import MovieDetails from "./components/itemDetails/MovieDetails";
-import TvDetails from "./components/itemDetails/TvDetails";
-import SearchPage from "./pages/Search/SearchPage";
-import SignUp from "./pages/Auth/SIgnUp";
-import Login from "./pages/Auth/Login";
+// import HomeGenreModal from "./pages/Genre/HomeGenreModal";
+// import MovieGenreModal from "./pages/Genre/MovieGenreModal";
+// import TvGenreModal from "./pages/Genre/TvGenreModal";
+// import MovieDetails from "./components/itemDetails/MovieDetails";
+// import TvDetails from "./components/itemDetails/TvDetails";
+// import SearchPage from "./pages/Search/SearchPage";
+// import SignUp from "./pages/Auth/SIgnUp";
+// import Login from "./pages/Auth/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Dispatch } from "./redux/store";
@@ -22,6 +22,14 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const TV = lazy(() => import("./pages/TV/TV"));
 const Movies = lazy(() => import("./pages/Movies/Movies"));
 const Saved = lazy(() => import("./pages/Saved/Saved"));
+const HomeGenreModal = lazy(() => import("./pages/Genre/HomeGenreModal"));
+const MovieGenreModal = lazy(() => import("./pages/Genre/MovieGenreModal"));
+const TvGenreModal = lazy(() => import("./pages/Genre/TvGenreModal"));
+const MovieDetails = lazy(() => import("./components/itemDetails/MovieDetails"));
+const TvDetails = lazy(() => import("./components/itemDetails/TvDetails"));
+const SearchPage = lazy(() => import("./pages/Search/SearchPage"));
+const SignUp = lazy(() => import("./pages/Auth/SIgnUp"));
+const Login = lazy(() => import("./pages/Auth/Login"));
 
 function App() {
   //@ts-ignore
